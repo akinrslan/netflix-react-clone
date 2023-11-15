@@ -27,7 +27,7 @@ pipeline {
             steps {
                 script{
                     //https://<AwsAccountNumber>.dkr.ecr.<region>.amazonaws.com/netflix-app', 'ecr:<region>:<credentialsId>
-                    docker.withRegistry('https://716819891591.dkr.ecr.us-east-2.amazonaws.com/nino:latest', 'ecr:us-west-2:akinino-ecr') {
+                    docker.withRegistry('https:716819891591.dkr.ecr.us-west-2.amazonaws.com/netflix-app:latest', 'ecr:us-west-2:akinino-ecr') {
                     // build image
                     def myImage = docker.build("716819891591.dkr.ecr.us-west-2.amazonaws.com/netflix-app:latest")
                     // push image
