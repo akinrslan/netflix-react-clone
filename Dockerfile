@@ -13,7 +13,7 @@ COPY . .
 RUN yarn install && yarn run build
 
 # nginx state for serving content
-FROM nginx:bullseye
+FROM nginx
 # Set working directory to nginx asset directory
 WORKDIR /usr/share/nginx/html
 # Remove default nginx static assets
